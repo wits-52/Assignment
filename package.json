@@ -1,0 +1,24 @@
+{
+    "name": "lendbox-assignment",
+    "version": "1.0.0",
+    "description": "Multi step registration api",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/wits-52/LendBox-Assignment.git"
+    },
+    "author": "Ritik Goyal",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/wits-52/LendBox-Assignment/issues"
+    },
+    "homepage": "https://github.com/wits-52/LendBox-Assignment#readme",
+    "dependencies": {
+        "body-parser": "^1.19.2",
+        "express": "^4.17.3",
+        "express-session": "^1.17.2"
+    }
+}
