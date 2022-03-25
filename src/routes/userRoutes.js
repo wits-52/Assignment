@@ -3,7 +3,7 @@ const users = require('../../data/users');
 const { phoneValidator, nameValidator, emailValidator, passwordValidator } = require("../utils/validators");
 
 const userRouter = express.Router();
-
+// TODO: state validation
 userRouter.post(['/register', '/register/step1'], (req, res, next) => {
     const { mobile, name } = req.body;
     if (phoneValidator(mobile).hasError) {
@@ -117,4 +117,41 @@ userRouter.post('/register/step3', (req, res, next) => {
     });
 });
 
+userRouter.post('/login', (req, res, next) => {
+    const { mobile, password } = req.body;
+
+    if(!mobile || !password) {
+        res.status(400)
+        .json({
+            error: 'Mobile and Password are required for login',
+            message: 'Please provide mobile and password for login.'
+        });
+        return;
+    }
+
+    const user = users.find(user => user.phone === mobile);
+
+    if(!user) {
+        res.status(404)
+        .json({
+            error: 'Not found!',
+            message: 'Please check the mobile. No user registered with this mobile.'
+        });
+        return;
+    }
+
+    if(user.password !== password) {
+        res.status(401)
+        .json({
+            error: 'Wrong Password.',
+            message: 'Password does not match. Please check again.'
+        });
+        return;
+    }
+    res.status(200)
+    .json({
+        data: 'Success!',
+        message: 'Login successful.'
+    });
+});
 module.exports = Object.freeze({ userRouter });
