@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "668a5e52-58f1-44f5-bc18-fb80f8ba37b4",
+		"name": "Lendbox-assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register: step1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "uyttjg",
+							"type": "default"
+						},
+						{
+							"key": "mobile",
+							"value": "9999997585",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:5000/user/register/step1",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"register",
+						"step1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register: step2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/user/register/step2",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"register",
+						"step2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register: step3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "mobile",
+							"value": "9999997585",
+							"type": "default"
+						},
+						{
+							"key": "dob",
+							"value": "2002-12-12",
+							"type": "default"
+						},
+						{
+							"key": "fatherName",
+							"value": "dafa",
+							"type": "default"
+						},
+						{
+							"key": "pan",
+							"value": "12233221QW",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:5000/user/register/step3",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"register",
+						"step3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "mobile",
+							"value": "9999999999",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "1234567",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:5000/user/login",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
