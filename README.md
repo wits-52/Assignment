@@ -1,2 +1,2 @@
-# LendBox-Assignment
+#Assignment
 Multi step registration api
